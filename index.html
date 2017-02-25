@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>godaddy</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/SystemService.js"></script>
+    <script src="scripts/controllers/FileViewController.js"></script>
+    <script src="scripts/controllers/CreateFolderController.js"></script>
+    <script src="scripts/controllers/CreateFileController.js"></script>
+    <script src="scripts/controllers/CreateFileController.js"></script>
+    <script src="scripts/factories/NodeFactory.js"></script>
+    <script src="scripts/factories/FileFactory.js"></script>
+    <script src="scripts/factories/FolderFactory.js"></script>
+</head>
+<body ng-app="godaddy" class="jumbotron">
+<div class="row" >
+    <div class="col-xs-offset-3 col-xs-6">
+        <button type="button" class="btn btn-default btn-lg" ui-sref="fileView" href="#">
+            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> File View
+        </button>
+        <button type="button" class="btn btn-default btn-lg" ui-sref="createFolder" href="#">
+            <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Create Folder
+        </button>
+        <button type="button" class="btn btn-default btn-lg" ui-sref="createFile" href="#">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span> Create File
+        </button>
+    </div>
+</div>
+<hr>
+<div class="row" >
+    <div class="col-xs-offset-3 col-xs-6">
+        <div id="uiview" ui-view=""></div>
+    </div>
+</div>
+</body>
+</html>

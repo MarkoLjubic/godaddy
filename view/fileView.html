@@ -1,0 +1,47 @@
+<div class="row" style="position: relative; top: 10px;">
+    <div class="col-xs-offset-1 col-xs-7">
+        <strong style="position: relative; top: 5px;">
+            CurrentPath : {{currentPath}}
+        </strong>
+    </div>
+    <div class="col-xs-1">
+        <button class="btn btn-success" type="button" ng-click="backToParentFolder()">
+            back
+        </button>
+    </div>
+</div>
+<hr>
+<div ng-repeat="ff in filesAndFoldersArray">
+    <div class="row">
+        <div class="col-xs-1">
+            <span class="glyphicon glyphicon-{{glyphiconArray[ff.getName()]}}" aria-hidden="true"></span>
+        </div>
+        <div class="col-xs-7">
+            <strong>
+                {{ff.getName()}}
+            </strong>
+        </div>
+        <div class="col-xs-4">
+            <button class="btn btn-primary" type="button" ng-click="openNode(ff.getName())">
+                open
+            </button>
+            <button class="btn btn-danger" type="button" ng-click="deleteNode(ff.getName())">
+                delete
+            </button>
+            <button class="btn btn-info" type="button" ng-click="openEditForm(ff.getName())">
+                edit
+            </button>
+        </div>
+    </div>
+    <div class="row" ng-if="editSignalArray[ff.getName()]">
+        <div class="col-xs-offset-1 col-xs-6">
+            <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="editFolder(ff.getName())">submit</button>
+                    </span>
+                <input type="text" class="form-control" placeholder="Enter new name..." ng-model="editNewNameArray[ff.getName()]">
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>

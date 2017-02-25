@@ -1,0 +1,20 @@
+<form class="form-horizontal states">
+    <div class="form-group">
+        <label for="folderName" class="col-sm-2 control-label">Name :</label>
+        <div class="col-sm-8">
+            <input type="input" class="form-control" id="folderName" placeholder="Name" ng-model="folderName">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="folderPath" class="col-sm-2 control-label">Path :</label>
+        <div class="col-sm-8">
+            <input type="input" class="form-control" id="folderPath" placeholder="Path" ng-model="path">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default" ng-click="createFolder()">Submit</button>
+        </div>
+    </div>
+</form>
